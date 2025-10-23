@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Badminton Store</title>
+    <style>
+        body {
+            background-color: #ffd1dc; /* rosa pastel */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* === MENÚ SUPERIOR === */
+        nav {
+            background-color: #c2185b;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* === ENCABEZADO === */
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #FF0000;
+        }
+
+        p {
+            margin: 20px;
+        }
+
+        /* === FORMULARIO === */
+        .formulario {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            width: 300px;
+            margin: 30px auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .formulario h2 {
+            text-align: center;
+            color: #c2185b;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .boton {
+            width: 100%;
+            background-color: #c2185b;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .boton:hover {
+            background-color: #a00043;
+        }
+
+        /* === TABLAS, IMÁGENES Y DEMÁS === */
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .imagenes-juntas {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .imagenes-juntas img {
+            width: 280px;
+            border-radius: 5px;
+        }
+
+        .info-extra {
+            background-color: #fff0f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #c2185b;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- === MENÚ DE INICIO === -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#juego">Mini Juego</a>
+        <a href="#video">Video</a>
+        <a href="#formulario">Registro</a>
+    </nav>
+
+    <!-- === INICIO === -->
+    <header id="inicio">
+        <h1>Bienvenidos a Badminton Store</h1>
+        <p>En Racket Center, te ofrecemos asesoría personalizada y el mejor equipo deportivo para deportes de raqueta. Contamos con productos de buena calidad, las 3 B: <strong>Bueno, Bonito y Barato.</strong></p>
+        <a href="https://share.google/xX8KE3Z8v24ZMLpR3" target="_blank">🛒 Visita mi tienda</a>
+    </header>
+
+    <!-- === FORMULARIO === -->
+    <section id="formulario">
+        <form class="formulario" action="registro.php" method="post">
+            <h2>Formulario de Inscripción</h2>
+
+            <div class="campo">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+            </div>
+
+            <div class="campo">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="boton">Inscribirse</button>
+        </form>
+    </section>
+
+    <!-- === PRODUCTOS === -->
+    <section id="productos">
+        <h2 style="text-align:center;">Nuestros Productos</h2>
+        <table>
+            <thead>
+                <tr><th>Producto</th><th>Precio</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Raqueta</td><td>$280.000</td></tr>
+                <tr><td>Zapatos</td><td>$400.000</td></tr>
+                <tr><td>Volante</td><td>$180.000</td></tr>
+            </tbody>
+        </table>
+
+        <div class="imagenes-juntas">
+            <img src="https://images.pexels.com/photos/3660204/pexels-photo-3660204.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Venta">
+            <img src="https://www.paralympic.org/sites/default/files/2019-09/Lima-2019-day-9-badminton.jpg" alt="Imagen deportiva 2">
+        </div>
+
+        <div class="info-extra">
+            <h2>¿Por Qué Elegir Racket Center?</h2>
+            <p><strong>En Racket Center</strong> ayudamos a jugadores de todos los niveles a alcanzar su mejor versión.</p>
+            <p><strong>Asesoría Profesional:</strong> te guiamos para elegir el equipo perfecto.</p>
+            <p><strong>Variedad:</strong> amplia selección de raquetas, calzado y accesorios.</p>
+            <p><strong>Compra Segura:</strong> envío rápido y confiable.</p>
+        </div>
+    </section>
+
+    <!-- === MINI JUEGO === -->
+    <section id="juego" style="text-align:center;">
+        <h2>🎮 Mini Juego Bádminton</h2>
+        <p>Usa W y S para mover tu raqueta</p>
+        <canvas id="c" width="700" height="400" style="background:#fff; border:2px solid #00796b; border-radius:8px;"></canvas>
+
+        <script>
+            const c=document.getElementById('c'),ctx=c.getContext('2d');
+            let pY=c.height/2-40, compY=c.height/2-40, bX=c.width/2,bY=c.height/2, bSpeedX=5,bSpeedY=3, pW=10,pH=80;
+            function draw(){ 
+              ctx.fillStyle='#e0f7fa'; ctx.fillRect(0,0,c.width,c.height);
+              ctx.fillStyle='#c2185b'; ctx.fillRect(10,pY,pW,pH);
+              ctx.fillStyle='#0097a7'; ctx.fillRect(c.width-20,compY,pW,pH);
+              ctx.beginPath(); ctx.fillStyle='#000'; ctx.arc(bX,bY,10,0,Math.PI*2); ctx.fill();
+            }
+            function update(){
+              bX+=bSpeedX; bY+=bSpeedY;
+              if(bY<=0||bY>=c.height) bSpeedY=-bSpeedY;
+              if(bX<=20 && bY>pY && bY<pY+pH) bSpeedX=-bSpeedX;
+              if(bX>=c.width-20 && bY>compY && bY<compY+pH) bSpeedX=-bSpeedX;
+              compY+=(compY+pH/2<bY)?3:-3;
+              compY=Math.min(Math.max(compY,0),c.height-pH);
+              if(bX<0||bX>c.width){ bX=c.width/2; bY=c.height/2; bSpeedX=-bSpeedX; bSpeedY=3;}
+            }
+            document.addEventListener('keydown',e=>{
+              if(e.key=='w'||e.key=='W') pY=Math.max(pY-20,0);
+              else if(e.key=='s'||e.key=='S') pY=Math.min(pY+20,c.height-pH);
+            });
+            function loop(){ update(); draw(); requestAnimationFrame(loop); }
+            loop();
+        </script>
+    </section>
+
+    <!-- === VIDEO === -->
+    <section id="video" style="text-align:center; margin:40px;">
+        <h2>🎥 Explicación del Bádminton</h2>
+        <iframe width="560" height="315" 
+            src="https://www.youtube-nocookie.com/embed/cNh_m9AQZcY?si=MJmwyYmX5e4Bh7f4" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- === PIE DE PÁGINA === -->
+    <footer>
+        <p>📞 Más información: 3108443463 | Leider Mena | Paulina Zapata</p>
+        <p>&copy; 2025 Racket Center - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
